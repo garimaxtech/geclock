@@ -16,7 +16,7 @@ export default function AuthScreen() {
       email: email.trim(),
       options: { shouldCreateUser: true },
     })
-    if (error) setError(error.message)
+    if (error) setError(error.message + (error.status ? ` [${error.status}]` : ''))
     else setStep('code')
     setLoading(false)
   }
