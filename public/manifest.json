@@ -1,0 +1,12 @@
+{
+  "name": "geclock",
+  "short_name": "geclock",
+  "description": "track your time, beautifully",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF8F6",
+  "theme_color": "#f9a8d4",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
