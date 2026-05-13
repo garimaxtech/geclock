@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import { supabase } from './lib/supabase'
 import AuthScreen from './components/AuthScreen'
 import Today from './pages/Today'
+import History from './pages/History'
 import Analytics from './pages/Analytics'
 import Categories from './pages/Categories'
 
 const TABS = [
   { id: 'today', label: 'Today', icon: '🏠' },
+  { id: 'history', label: 'History', icon: '📅' },
   { id: 'analytics', label: 'Stats', icon: '📊' },
   { id: 'categories', label: 'Labels', icon: '🏷️' },
 ]
@@ -96,6 +98,7 @@ export default function App() {
     <div className="flex flex-col min-h-dvh bg-[#FDF8F6]">
       <div className="flex-1 overflow-y-auto pb-24">
         {tab === 'today' && <Today categories={categories} userId={userId} />}
+        {tab === 'history' && <History categories={categories} userId={userId} />}
         {tab === 'analytics' && <Analytics categories={categories} userId={userId} />}
         {tab === 'categories' && (
           <Categories
